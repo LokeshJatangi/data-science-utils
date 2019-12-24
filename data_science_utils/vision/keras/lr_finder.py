@@ -127,7 +127,7 @@ class LRFinder:
         self.lr_mult = (float(end_lr) / float(start_lr)) ** (float(1) / float(num_batches))
 
         # Save weights into a file
-        self.model.save_weights('tmp.h5')
+#         self.model.save_weights('tmp.h5')
 
         # Remember the original learning rate
         original_lr = K.get_value(self.model.optimizer.lr)
