@@ -145,7 +145,7 @@ class LRFinder:
                        callbacks=[callback])
 
         # Restore the weights to the state before model fitting
-        self.model.load_weights('tmp.h5')
+        #self.model.load_weights('tmp.h5')
 
         # Restore the original learning rate
         K.set_value(self.model.optimizer.lr, original_lr)
@@ -165,7 +165,7 @@ class LRFinder:
         self.lr_mult = (float(end_lr) / float(start_lr)) ** (float(1) / float(steps_per_epoch * epochs))
 
         # Save weights into a file
-        self.model.save_weights('tmp.h5')
+        #self.model.save_weights('tmp.h5')
 
         # Remember the original learning rate
         original_lr = K.get_value(self.model.optimizer.lr)
@@ -186,7 +186,7 @@ class LRFinder:
                                  **kw_fit)
 
         # Restore the weights to the state before model fitting
-        self.model.load_weights('tmp.h5')
+        #self.model.load_weights('tmp.h5')
 
         # Restore the original learning rate
         K.set_value(self.model.optimizer.lr, original_lr)
